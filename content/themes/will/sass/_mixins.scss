@@ -1,0 +1,3 @@
+@mixin bp($size) {
+    @size only screen and (max-width: $size) { @content; }
+}

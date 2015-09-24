@@ -1,3 +1,41 @@
+// Variables
+$bp-med: 400px;
+
 body {
   font-family: 'Inconsolata', Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.box {
+  padding: 10px;
+}
+
+.navigation {
+  flex-grow: 1;
+  flex-order: 2;
+  background-color: yellow;
+  @include bp($bp-med) {
+    order: 1;
+  }
+}
+
+.content {
+  flex-grow: 10;
+  background-color: blue;
+  order: 1;
+  @include bp($bp-med) {
+    flex-order: 2;
+  }
+}
+
+.nav {
+  li {
+    padding: 10px;
+  }
 }

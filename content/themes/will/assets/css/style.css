@@ -48,4 +48,30 @@ table {
 body {
   font-family: 'Inconsolata', Helvetica, sans-serif; }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch; }
+
+.box {
+  padding: 10px; }
+
+.navigation {
+  flex-grow: 1;
+  flex-order: 2;
+  background-color: yellow; }
+@size only screen and (max-width: $size) {
+  .navigation {
+    order: 1; } }
+.content {
+  flex-grow: 10;
+  background-color: blue;
+  order: 1; }
+@size only screen and (max-width: $size) {
+  .content {
+    flex-order: 2; } }
+.nav li {
+  padding: 10px; }
+
 /*# sourceMappingURL=style.css.map */
