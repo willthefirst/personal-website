@@ -46,7 +46,24 @@ table {
   border-spacing: 0; }
 
 body {
+  font-size: 16px;
+  line-height: 24px;
   font-family: 'Inconsolata', Helvetica, sans-serif; }
+
+h1 {
+  font-size: 37.89749px;
+  line-height: 56.84623px; }
+
+h2 {
+  font-size: 28.43022px;
+  line-height: 42.64534px; }
+
+h3 {
+  font-size: 21.328px;
+  line-height: 31.992px; }
+
+p {
+  margin-bottom: 36px; }
 
 .container {
   display: flex;
@@ -59,19 +76,23 @@ body {
 
 .navigation {
   flex-grow: 1;
-  flex-order: 2;
-  background-color: yellow; }
+  flex-order: 2; }
 @size only screen and (max-width: $size) {
   .navigation {
     order: 1; } }
 .content {
   flex-grow: 10;
-  background-color: blue;
   order: 1; }
 @size only screen and (max-width: $size) {
   .content {
     flex-order: 2; } }
-.nav li {
-  padding: 10px; }
+.nav {
+  text-align: right; }
+  .nav li {
+    padding: 10px; }
+
+.post-meta {
+  color: #5d5d5d;
+  font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */
