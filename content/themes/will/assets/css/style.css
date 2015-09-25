@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -33,14 +39,6 @@ body {
 ol, ul {
   list-style: none; }
 
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -48,48 +46,89 @@ table {
 body {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 12px;
   font-family: 'Inconsolata', Helvetica, sans-serif; }
 
 h1 {
   font-size: 37.89749px;
-  line-height: 56.84623px; }
+  line-height: 56.84623px;
+  margin-bottom: 12px; }
 
 h2 {
   font-size: 28.43022px;
-  line-height: 42.64534px; }
+  line-height: 42.64534px;
+  margin-bottom: 12px; }
 
 h3 {
   font-size: 21.328px;
-  line-height: 31.992px; }
+  line-height: 31.992px;
+  margin-bottom: 12px; }
 
 p {
-  margin-bottom: 36px; }
+  margin-bottom: 12px; }
+
+ol {
+  list-style-type: decimal;
+  padding-left: 28px;
+  margin-left: 16px;
+  margin-bottom: 12px; }
+
+ul {
+  list-style-type: circle;
+  padding-left: 28px;
+  margin-left: 16px;
+  margin-bottom: 12px; }
+
+pre {
+  margin-bottom: 12px; }
+
+blockquote {
+  padding-left: 24px; }
+  blockquote:before {
+    content: '"'; }
+  blockquote:after {
+    content: '"'; }
+  blockquote p {
+    display: inline-block; }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch; }
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .box {
-  padding: 10px; }
+  padding: 0 20px; }
 
 .navigation {
-  flex-grow: 1;
-  flex-order: 2; }
-@size only screen and (max-width: $size) {
-  .navigation {
-    order: 1; } }
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 14.89362%;
+  background-color: #efefef; }
+  .navigation:last-child {
+    margin-right: 0; }
+
 .content {
-  flex-grow: 10;
-  order: 1; }
-@size only screen and (max-width: $size) {
-  .content {
-    flex-order: 2; } }
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 82.97872%;
+  background-color: #dfdfdf; }
+  .content:last-child {
+    margin-right: 0; }
+
 .nav {
-  text-align: right; }
+  text-align: right;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0; }
   .nav li {
-    padding: 10px; }
+    padding: 10px 0; }
 
 .post-meta {
   color: #5d5d5d;

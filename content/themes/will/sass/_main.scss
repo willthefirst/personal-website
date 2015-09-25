@@ -3,68 +3,100 @@
 $bp-med: 400px;
 $base-font: 16px;
 $line-height-ratio: 1.5;
+$margin-bottom: .5*($line-height-ratio*modular-scale(0, $base-font));
+
 
 // GLOBAL
 
 body {
   font-size: modular-scale(0, $base-font);
   line-height: $line-height-ratio*(modular-scale(0, $base-font));
+  margin-bottom: $margin-bottom;
   font-family: 'Inconsolata', Helvetica, sans-serif;
 }
 
 h1 {
   font-size: modular-scale(3, $base-font);
   line-height: $line-height-ratio*(modular-scale(3, $base-font));
+  margin-bottom: $margin-bottom;
 }
 
 h2 {
   font-size: modular-scale(2, $base-font);
   line-height: $line-height-ratio*(modular-scale(2, $base-font));
+  margin-bottom: $margin-bottom;
 }
 
 h3 {
   font-size: modular-scale(1, $base-font);
   line-height: $line-height-ratio*(modular-scale(1, $base-font));
+  margin-bottom: $margin-bottom;
 }
 
 p {
-  margin-bottom: 1.5*($line-height-ratio*modular-scale(0, $base-font));
+  margin-bottom: $margin-bottom;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 28px;
+  margin-left: 16px;
+  margin-bottom: $margin-bottom;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 28px;
+  margin-left: 16px;
+  margin-bottom: $margin-bottom;
+}
+
+pre {
+  margin-bottom: $margin-bottom;
+}
+
+blockquote {
+  padding-left: 24px;
+  &:before {
+    content: '"';
+  }
+  &:after {
+    content: '"'
+  }
+  p {
+    display: inline-block;
+  }
 }
 
 // STRUCTURAL
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
+  @include outer-container;
 }
 
 .box {
-  padding: 10px;
+  padding: 0 20px;
 }
 
 .navigation {
-  flex-grow: 1;
-  flex-order: 2;
-  @include bp($bp-med) {
-    order: 1;
-  }
+  @include span-columns(2);
+  background-color: #efefef;
 }
 
 .content {
-  flex-grow: 10;
-  order: 1;
-  @include bp($bp-med) {
-    flex-order: 2;
-  }
+  @include span-columns(10);
+  background-color: #dfdfdf;
 }
 
 .nav {
   text-align: right;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 
   li {
-    padding: 10px;
+    padding: 10px 0;
   }
 }
 
