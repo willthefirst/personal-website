@@ -92,13 +92,17 @@ blockquote {
     display: inline-block; }
 
 .container {
-  max-width: 1800px;
+  max-width: 1400px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 40px; }
   .container::after {
     clear: both;
     content: "";
     display: table; }
+  @media only screen and (min-width: 500px) {
+    .container {
+      margin-top: 100px; } }
 
 .box {
   padding: 0 20px; }
@@ -107,28 +111,49 @@ blockquote {
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 14.89362%;
-  background-color: #efefef; }
+  width: 100%;
+  text-align: center; }
   .navigation:last-child {
     margin-right: 0; }
+  @media only screen and (min-width: 500px) {
+    .navigation {
+      text-align: right;
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 14.89362%; }
+      .navigation:last-child {
+        margin-right: 0; } }
 
 .content {
   float: left;
   display: block;
   margin-right: 2.12766%;
-  width: 82.97872%;
-  background-color: #dfdfdf; }
+  width: 100%; }
   .content:last-child {
     margin-right: 0; }
+  @media only screen and (min-width: 500px) {
+    .content {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%; }
+      .content:last-child {
+        margin-right: 0; } }
 
 .nav {
-  text-align: right;
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
   margin-bottom: 0; }
   .nav li {
     padding: 10px 0; }
+
+.post-title {
+  margin-bottom: 0; }
+
+.post-header {
+  margin-bottom: 12px; }
 
 .post-meta {
   color: #5d5d5d;
