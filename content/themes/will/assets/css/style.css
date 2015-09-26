@@ -95,7 +95,7 @@ blockquote {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px; }
+  margin-top: 10px; }
   .container::after {
     clear: both;
     content: "";
@@ -145,9 +145,16 @@ blockquote {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  display: none; }
+  @media only screen and (min-width: 500px) {
+    .nav {
+      display: block; } }
   .nav li {
     padding: 10px 0; }
+
+.post {
+  margin-bottom: 12px; }
 
 .post-title {
   margin-bottom: 0; }
@@ -158,5 +165,26 @@ blockquote {
 .post-meta {
   color: #5d5d5d;
   font-style: italic; }
+
+.site-header {
+  display: block; }
+  .site-header::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.site-logo {
+  display: block;
+  margin-bottom: 12px; }
+
+.site-logo-img {
+  width: 100px;
+  height: 100px; }
+
+@media only screen and (min-width: 500px) {
+  .site-name {
+    position: absolute;
+    top: 0;
+    left: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

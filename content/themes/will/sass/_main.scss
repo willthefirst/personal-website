@@ -72,7 +72,7 @@ blockquote {
 
 .container {
   @include outer-container;
-  margin-top: 40px;
+  margin-top: 10px;
   @include bp($bp-med) {
     margin-top: 100px;
   }
@@ -104,6 +104,10 @@ blockquote {
   padding-left: 0;
   margin-left: 0;
   margin-bottom: 0;
+  display: none;
+  @include bp($bp-med) {
+    display: block;
+  }
 
   li {
     padding: 10px 0;
@@ -111,6 +115,10 @@ blockquote {
 }
 
 // POST
+
+.post {
+  margin-bottom: $margin-bottom;
+}
 
 .post-title {
   margin-bottom: 0;
@@ -123,4 +131,28 @@ blockquote {
 .post-meta {
   color: rgb(93, 93, 93);
   font-style: italic;
+}
+
+// ELEMENTS
+
+.site-header {
+  @include row();
+}
+
+.site-logo {
+  display: block;
+  margin-bottom: $margin-bottom;
+}
+
+.site-logo-img {
+  width: 100px;
+  height: 100px;
+}
+
+.site-name {
+  @include bp($bp-med) {
+    position: absolute;
+    top: 0;
+    left: 20px;
+  }
 }
