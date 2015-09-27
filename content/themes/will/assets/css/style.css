@@ -100,7 +100,7 @@ blockquote {
     clear: both;
     content: "";
     display: table; }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 700px) {
     .container {
       margin-top: 100px; } }
 
@@ -115,7 +115,7 @@ blockquote {
   text-align: center; }
   .navigation:last-child {
     margin-right: 0; }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 700px) {
     .navigation {
       text-align: right;
       float: left;
@@ -132,7 +132,7 @@ blockquote {
   width: 100%; }
   .content:last-child {
     margin-right: 0; }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 700px) {
     .content {
       float: left;
       display: block;
@@ -141,16 +141,22 @@ blockquote {
       .content:last-child {
         margin-right: 0; } }
 
-.nav {
+.nav-small {
+  margin-bottom: 12px; }
+  @media only screen and (min-width: 700px) {
+    .nav-small {
+      display: none; } }
+
+.nav-big {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
   margin-bottom: 0;
   display: none; }
-  @media only screen and (min-width: 500px) {
-    .nav {
+  @media only screen and (min-width: 700px) {
+    .nav-big {
       display: block; } }
-  .nav li {
+  .nav-big li {
     padding: 10px 0; }
 
 .post {
@@ -181,7 +187,7 @@ blockquote {
   width: 100px;
   height: 100px; }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 700px) {
   .site-name {
     position: absolute;
     top: 0;
