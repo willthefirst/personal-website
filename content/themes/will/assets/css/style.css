@@ -67,6 +67,11 @@ h3 {
 p {
   margin-bottom: 12px; }
 
+a {
+  color: #009A36; }
+  a:visited {
+    color: #009A36; }
+
 ol {
   list-style-type: decimal;
   padding-left: 28px;

@@ -37,6 +37,14 @@ p {
   margin-bottom: $margin-bottom;
 }
 
+a {
+  color: #009A36;
+
+  &:visited{
+    color: #009A36;
+  }
+}
+
 ol {
   list-style-type: decimal;
   padding-left: 28px;
